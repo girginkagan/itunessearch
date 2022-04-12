@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemCollectionViewCell" customModule="itunessearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="265"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="265"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-EJ-arg">
+                        <rect key="frame" x="0.0" y="0.0" width="204" height="265"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="U2g-EJ-arg" secondAttribute="height" multiplier="1:1.3" id="KFJ-fP-sU9"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_banner_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="nAb-m7-VPk">
+                        <rect key="frame" x="0.0" y="200" width="204" height="65"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_banner_shadow_top" translatesAutoresizingMaskIntoConstraints="NO" id="NVJ-vC-LHe">
+                        <rect key="frame" x="0.0" y="-2" width="204" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="N0I-da-xQa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-8n-xpV">
+                        <rect key="frame" x="10" y="230" width="151.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="w53-Ps-EPo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" name="color_white"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/12/2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOG-aL-ojh">
+                        <rect key="frame" x="10" y="15" width="184" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="Sjp-pn-dZn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="color_white"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20$" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58k-03-fjJ">
+                        <rect key="frame" x="171.5" y="233" width="22.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="color_white"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="lOG-aL-ojh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="33h-7H-Wtr"/>
+                <constraint firstItem="58k-03-fjJ" firstAttribute="leading" secondItem="QCh-8n-xpV" secondAttribute="trailing" constant="10" id="6Fb-AR-RmK"/>
+                <constraint firstItem="lOG-aL-ojh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="8e7-k4-Pqc"/>
+                <constraint firstItem="NVJ-vC-LHe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ASk-CA-XvB"/>
+                <constraint firstItem="QCh-8n-xpV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="AaT-Wh-JVS"/>
+                <constraint firstItem="NVJ-vC-LHe" firstAttribute="top" secondItem="U2g-EJ-arg" secondAttribute="top" constant="-2" id="AnX-iF-32F"/>
+                <constraint firstAttribute="trailing" secondItem="58k-03-fjJ" secondAttribute="trailing" constant="10" id="Cpb-TC-L03"/>
+                <constraint firstItem="58k-03-fjJ" firstAttribute="centerY" secondItem="QCh-8n-xpV" secondAttribute="centerY" id="Hyy-ug-ySD"/>
+                <constraint firstItem="U2g-EJ-arg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KYN-Yp-w05"/>
+                <constraint firstItem="nAb-m7-VPk" firstAttribute="bottom" secondItem="U2g-EJ-arg" secondAttribute="bottom" id="U4K-WJ-29e"/>
+                <constraint firstItem="nAb-m7-VPk" firstAttribute="top" secondItem="QCh-8n-xpV" secondAttribute="top" constant="-30" id="Uhm-lX-S5q"/>
+                <constraint firstItem="nAb-m7-VPk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZTq-DX-hL1"/>
+                <constraint firstItem="U2g-EJ-arg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZZh-eo-1iR"/>
+                <constraint firstAttribute="trailing" secondItem="lOG-aL-ojh" secondAttribute="trailing" constant="10" id="dhn-FQ-KRj"/>
+                <constraint firstAttribute="trailing" secondItem="NVJ-vC-LHe" secondAttribute="trailing" id="jKu-8Q-wyA"/>
+                <constraint firstAttribute="trailing" secondItem="nAb-m7-VPk" secondAttribute="trailing" id="jo6-7d-KXs"/>
+                <constraint firstItem="QCh-8n-xpV" firstAttribute="bottom" secondItem="U2g-EJ-arg" secondAttribute="bottom" constant="-15" id="tY9-ZL-bTF"/>
+                <constraint firstAttribute="trailing" secondItem="U2g-EJ-arg" secondAttribute="trailing" id="toq-Xg-0dL"/>
+            </constraints>
+            <size key="customSize" width="204" height="265"/>
+            <connections>
+                <outlet property="ivArtwork" destination="U2g-EJ-arg" id="qmS-vw-MjY"/>
+                <outlet property="lblDate" destination="lOG-aL-ojh" id="lac-cm-aST"/>
+                <outlet property="lblName" destination="QCh-8n-xpV" id="4QV-gT-dBz"/>
+                <outlet property="lblPrice" destination="58k-03-fjJ" id="B9O-Je-4dL"/>
+            </connections>
+            <point key="canvasLocation" x="165.21739130434784" y="179.12946428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_banner_shadow" width="375" height="50"/>
+        <image name="ic_banner_shadow_top" width="377" height="52"/>
+        <namedColor name="color_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

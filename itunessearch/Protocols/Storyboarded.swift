@@ -22,6 +22,9 @@ extension Storyboarded {
         case AppStoryboard.Home.rawValue:
             let viewController = HomeViewController(nibName: identifier, bundle: nil) as! Self
             return viewController
+        case AppStoryboard.Detail.rawValue:
+            let viewController = DetailViewController(nibName: identifier, bundle: nil) as! Self
+            return viewController
         default:
             let viewController = SplashViewController(nibName: identifier, bundle: nil) as! Self
             return viewController

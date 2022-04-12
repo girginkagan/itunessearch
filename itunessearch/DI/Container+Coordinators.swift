@@ -13,5 +13,6 @@ extension Container {
         autoregister(AppCoordinator.self, initializer: AppCoordinator.init)
         autoregister(SplashCoordinator.self, initializer: SplashCoordinator.init)
         autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
+        autoregister(DetailCoordinator.self, initializer: DetailCoordinator.init)
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IServiceHandler {
-    //func getCharacters(offset: Int, successCompletion: @escaping(CharactersResponseModel) -> (), errorCompletion: @escaping(BaseErrorModel) -> ())
+    func getData(offset: Int, q: String, wrapperType: WrapperType, successCompletion: @escaping(DataResponseModel) -> (), errorCompletion: @escaping(BaseErrorModel) -> ())
 }

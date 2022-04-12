@@ -20,11 +20,16 @@ final class SplashViewModel: BaseViewModel {
     }
     
     func setBindings() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.isReady.onNext(true)
-        }
-        /*appDelegate.resultCharacters.asObservable()
+        DataProvider.shared.data.asObservable()
             .map { $0 != nil }.bind(to: isReady)
-            .disposed(by: disposeBag)*/
+            .disposed(by: disposeBag)
+    }
+    
+    func getData() {
+        services.getData(offset: DataProvider.shared.data.value?.results?.count ?? 0, q: "test", wrapperType: .movie) { data in
+            DataProvider.shared.data.accept(data)
+        } errorCompletion: { [weak self] error in
+            self?.isError.onNext(error)
+        }
     }
 }

@@ -53,9 +53,9 @@ extension BaseRequest {
     var baseUrl: String {
         switch enviroment {
         case .Prod:
-            return "https://itunes.apple.com/search"
+            return "https://itunes.apple.com/"
         default:
-            return "https://itunes.apple.com/search"
+            return "https://itunes.apple.com/"
         }
     }
 }

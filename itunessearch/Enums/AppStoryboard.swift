@@ -10,4 +10,5 @@ import Foundation
 enum AppStoryboard: String {
     case Splash = "SplashViewController"
     case Home = "HomeViewController"
+    case Detail = "DetailViewController"
 }

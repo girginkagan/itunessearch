@@ -7,10 +7,12 @@ target 'itunessearch' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
   pod 'Alamofire', '5.5.0'
   pod 'SVProgressHUD'
   pod 'Kingfisher'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
+  pod 'IQKeyboardManagerSwift'
 
 end

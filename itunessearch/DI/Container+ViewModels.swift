@@ -12,5 +12,6 @@ extension Container {
     func registerViewModels() {
         autoregister(SplashViewModel.self, initializer: SplashViewModel.init)
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
+        autoregister(DetailViewModel.self, initializer: DetailViewModel.init)
     }
 }

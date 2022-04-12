@@ -23,4 +23,10 @@ class HomeCoordinator: BaseCoordinator {
         navigationController.navigationBar.tintColor = UIColor(named: "AccentColor")
         navigationController.viewControllers = [viewController]
     }
+    
+    func presentDetail(data: Result) {
+        let coordinator = AppDelegate.container.resolve(DetailCoordinator.self)!
+        start(coordinator: coordinator)
+        (navigationController.viewControllers.last as? DetailViewController)?.data = data
+    }
 }

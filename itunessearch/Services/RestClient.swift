@@ -11,11 +11,17 @@ public class RestClient: IServiceHandler {
     static let sharedInstance = RestClient()
     
     private func sendRequest<T: Codable>(_ request: BaseRequest, _ type: T.Type, successCompletion: @escaping(T) -> (), errorCompletion:  @escaping(BaseErrorModel) -> ()) {
-        AF.request(request.request()).responseDecodable { (response: AFDataResponse<T>) in
+        AF.request(request.request()).responseString { response in
             switch response.result {
                 case .success(let json):
-                if response.response!.statusCode == APIStatusCodes.Success.rawValue {
-                    successCompletion(json)
+                if let data = json.replacingOccurrences(of: "\n", with: "").data(using: .utf8, allowLossyConversion: true), response.response!.statusCode == APIStatusCodes.Success.rawValue {
+                    do {
+                        let json = try JSONDecoder().decode(T.self, from: data)
+                        successCompletion(json)
+                    } catch {
+                        print(error.localizedDescription)
+                        errorCompletion(BaseErrorModel(errorCode: response.response!.statusCode, message: error.localizedDescription, errors: nil))
+                    }
                 }
                 else {
                     print(response.result)
@@ -28,13 +34,8 @@ public class RestClient: IServiceHandler {
         }
     }
     
-    /*func getCharacters(offset: Int, successCompletion: @escaping (CharactersResponseModel) -> (), errorCompletion: @escaping (BaseErrorModel) -> ()) {
-        let request = GetCharactersApiRequest(offset: offset)
-        sendRequest(request, CharactersResponseModel.self, successCompletion: successCompletion, errorCompletion: errorCompletion)
+    func getData(offset: Int, q: String, wrapperType: WrapperType, successCompletion: @escaping (DataResponseModel) -> (), errorCompletion: @escaping (BaseErrorModel) -> ()) {
+        let request = GetDataApiRequest(offset: offset, q: q, wrapperType: wrapperType)
+        sendRequest(request, DataResponseModel.self, successCompletion: successCompletion, errorCompletion: errorCompletion)
     }
-    
-    func getComicsByCharacter(characterId: Int, successCompletion: @escaping (ComicsResponseModel) -> (), errorCompletion: @escaping (BaseErrorModel) -> ()) {
-        let request = GetComicsByCharacterApiRequest(characterId: characterId)
-        sendRequest(request, ComicsResponseModel.self, successCompletion: successCompletion, errorCompletion: errorCompletion)
-    }*/
 }

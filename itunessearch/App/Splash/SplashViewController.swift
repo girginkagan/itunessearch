@@ -17,12 +17,7 @@ final class SplashViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUI()
         setBindings()
-    }
-    
-    private func setUI() {
-        
     }
     
     private func setBindings() {
@@ -38,6 +33,8 @@ final class SplashViewController: UIViewController, Storyboarded {
                 }
             }
             .disposed(by: disposeBag)
+        
+        viewModel.getData()
     }
 
 }

@@ -7,6 +7,6 @@
 
 import UIKit
 
-class BaseViewModel {
+class BaseViewModel: NSObject {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 }
